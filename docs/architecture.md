@@ -37,7 +37,7 @@
 - **Proxy EC2**
   - **역할**: Velocity 프록시
   - **사양 & 설정**:
-    - `t4g.nano` (2 vCPU/0.5 GB RAM) + `itzg/docker-mc-proxy`
+    - `t4g.micro` (2 vCPU/1 GB RAM) + `itzg/docker-mc-proxy`
     - `VELOCITY_SERVERS` 환경 변수:
       `lobby:host=paperserver.internal:25501`
       `wild:host=paperserver.internal:25502`

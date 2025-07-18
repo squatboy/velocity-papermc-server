@@ -55,7 +55,7 @@ environment:
 
 ### 리소스 최적화 설정
 ```yaml
-# EC2 리소스 최대 활용 예시 (t4g.nano: 2 vCPU, 0.5GB RAM)
+# EC2 리소스 최대 활용 예시 (t4g.micro: 2 vCPU, 1GB RAM)
 environment:
   MEMORY: "400m"                  # 400MB 할당 (100MB 시스템 여유)
   JVM_OPTS: "-XX:+UseSerialGC"    # 적은 메모리에 적합한 GC
@@ -175,9 +175,9 @@ volumes:
 
 ## 최적화된 리소스 할당
 
-### t4g.nano (Velocity Proxy)
+### t4g.micro (Velocity Proxy)
 - **CPU**: 2 vCPU (100% 활용 가능)
-- **Memory**: 0.5GB 중 0.4GB Java 할당
+- **Memory**: 1GB 중 512MB Java 할당
 - **네트워크**: 최대 5Gbps
 
 ### r6g.xlarge (Paper Server - 통합)
