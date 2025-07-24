@@ -3,6 +3,5 @@
 *.tfstate.*
 .terraform.lock.hcl
 .terraform/
-*.tfvarsgit 
-docs/
 *.tfvars
+docs
