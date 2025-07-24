@@ -18,35 +18,35 @@ output "availability_zone" {
   value       = var.availability_zone
 }
 
-output "public_subnet_ids" {
-  description = "Public Subnet ID 목록"
-  value       = aws_subnet.public[*].id
+output "public_subnet_id" {
+  description = "Public Subnet ID "
+  value       = aws_subnet.public.id
 }
 
-output "private_subnet_ids" {
-  description = "Private Subnet ID 목록"
-  value       = aws_subnet.private[*].id
+output "private_subnet_id" {
+  description = "Private Subnet ID "
+  value       = aws_subnet.private.id
 }
 
-output "public_subnet_cidrs" {
-  description = "Public Subnet CIDR 블록 목록"
-  value       = aws_subnet.public[*].cidr_block
+output "public_subnet_cidr" {
+  description = "Public Subnet CIDR 블록 "
+  value       = aws_subnet.public.cidr_block
 }
 
-output "private_subnet_cidrs" {
-  description = "Private Subnet CIDR 블록 목록"
-  value       = aws_subnet.private[*].cidr_block
+output "private_subnet_cidr" {
+  description = "Private Subnet CIDR 블록 "
+  value       = aws_subnet.private.cidr_block
 }
 
-# output "nat_gateway_ids" {
-#   description = "NAT Gateway ID 목록"
-#   value       = aws_nat_gateway.mcserver_nat[*].id
-# }
+output "nat_gateway_ids" {
+  description = "NAT Gateway ID"
+  value       = aws_nat_gateway.mcserver_nat.id
+}
 
-# output "nat_gateway_public_ips" {
-#   description = "NAT Gateway Public IP 목록"
-#   value       = aws_eip.nat[*].public_ip
-# }
+output "nat_gateway_public_ip" {
+  description = "NAT Gateway Public IP"
+  value       = aws_eip.nat.public_ip
+}
 
 output "public_route_table_id" {
   description = "Public 라우팅 테이블 ID"
@@ -54,6 +54,6 @@ output "public_route_table_id" {
 }
 
 output "private_route_table_ids" {
-  description = "Private 라우팅 테이블 ID 목록"
-  value       = aws_route_table.private[*].id
+  description = "Private 라우팅 테이블 ID "
+  value       = aws_route_table.private.id
 }

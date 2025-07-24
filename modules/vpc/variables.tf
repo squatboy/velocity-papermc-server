@@ -14,11 +14,11 @@ variable "availability_zone" {
 }
 
 variable "public_subnet_cidr" {
-  description = "Public Subnet CIDR 블록 목록"
-  type        = list(string)
+  description = "Public Subnet CIDR 블록 "
+  type        = string
 }
 
 variable "private_subnet_cidr" {
-  description = "Private Subnet CIDR 블록 목록"
-  type        = list(string)
+  description = "Private Subnet CIDR 블록 "
+  type        = string
 }
