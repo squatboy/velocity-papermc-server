@@ -1,2 +1,9 @@
 .github/
-docs/deployment-steps.md
+docs/
+
+# terraform
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+.terraform/
+*.tfvars
