@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"ebs","Source":"./modules/ebs","Dir":"modules/ebs"},{"Key":"ec2","Source":"./modules/ec2","Dir":"modules/ec2"},{"Key":"iam","Source":"./modules/iam","Dir":"modules/iam"},{"Key":"security","Source":"./modules/security","Dir":"modules/security"},{"Key":"vpc","Source":"./modules/vpc","Dir":"modules/vpc"}]}

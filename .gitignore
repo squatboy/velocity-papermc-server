@@ -1,18 +1,8 @@
-.github/
-<<<<<<< HEAD
-docs/
-
 # terraform
 *.tfstate
 *.tfstate.*
 .terraform.lock.hcl
 .terraform/
+*.tfvarsgit 
+docs/
 *.tfvars
-=======
-docs/deployment-steps.md
-*docs
-*lock.hcl
-*.tfstate.*
-*.tfstate
-*.tfvars
->>>>>>> b400b52 (init)
