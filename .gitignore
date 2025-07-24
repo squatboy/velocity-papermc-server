@@ -1,4 +1,5 @@
 .github/
+<<<<<<< HEAD
 docs/
 
 # terraform
@@ -7,3 +8,11 @@ docs/
 .terraform.lock.hcl
 .terraform/
 *.tfvars
+=======
+docs/deployment-steps.md
+*docs
+*lock.hcl
+*.tfstate.*
+*.tfstate
+*.tfvars
+>>>>>>> b400b52 (init)
