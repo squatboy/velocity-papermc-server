@@ -70,3 +70,65 @@ output "ec2_instances_summary" {
   description = "모든 EC2 인스턴스 요약 정보"
   value       = module.ec2.ec2_instances_info
 }
+
+# =============================================================================
+# VPC Flow Logs Module Outputs
+# =============================================================================
+
+output "vpc_flow_logs_s3_bucket" {
+  description = "VPC Flow Logs S3 버킷 이름"
+  value       = module.flow_logs.s3_bucket_name
+}
+
+output "vpc_flow_logs_s3_bucket_arn" {
+  description = "VPC Flow Logs S3 버킷 ARN"
+  value       = module.flow_logs.s3_bucket_arn
+}
+
+# =============================================================================
+# SNS Module Outputs
+# =============================================================================
+
+output "sns_topic_arn" {
+  description = "모니터링 알림용 SNS Topic ARN"
+  value       = module.sns.sns_topic_arn
+}
+
+output "sns_topic_name" {
+  description = "SNS Topic 이름"
+  value       = module.sns.sns_topic_name
+}
+
+# =============================================================================
+# CloudWatch Module Outputs
+# =============================================================================
+
+output "cloudwatch_log_groups" {
+  description = "CloudWatch 로그 그룹들"
+  value       = module.cloudwatch.log_groups
+}
+
+output "cloudwatch_agent_config_parameter" {
+  description = "CloudWatch Agent 설정 SSM Parameter"
+  value       = module.cloudwatch.cloudwatch_agent_config_parameter
+}
+
+output "cloudwatch_alarm_names" {
+  description = "CloudWatch 알람 이름들"
+  value       = module.cloudwatch.alarm_names
+}
+
+# =============================================================================
+# 통합 모니터링 정보
+# =============================================================================
+
+output "monitoring_info" {
+  description = "모니터링 시스템 전체 정보"
+  value = {
+    vpc_flow_logs_bucket      = module.flow_logs.s3_bucket_name
+    cloudwatch_log_groups     = module.cloudwatch.log_groups
+    sns_topic_arn            = module.sns.sns_topic_arn
+    cloudwatch_agent_config  = module.cloudwatch.cloudwatch_agent_config_parameter
+    cloudwatch_alarms        = module.cloudwatch.alarm_names
+  }
+}

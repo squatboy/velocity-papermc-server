@@ -49,13 +49,11 @@ variable "private_subnet_cidr" {
 variable "velocity_instance_type" {
   description = "Velocity Proxy EC2 인스턴스 타입"
   type        = string
-  default     = "t4g.micro"
 }
 
 variable "paper_instance_type" {
   description = "Paper Server EC2 인스턴스 타입"
   type        = string
-  default     = "r6g.xlarge"
 }
 
 variable "key_name" {
@@ -78,4 +76,14 @@ variable "velocity_ebs_size" {
   description = "Velocity 프록시용 EBS 볼륨 크기 (GB)"
   type        = number
   default     = 1
+}
+
+# =============================================================================
+# Monitoring Module Variables
+# =============================================================================
+
+variable "alert_email" {
+  description = "모니터링 알림을 받을 이메일 주소 (선택사항)"
+  type        = string
+  default     = ""
 }
