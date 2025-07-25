@@ -25,6 +25,20 @@ systemctl enable docker
 systemctl start amazon-ssm-agent
 systemctl enable amazon-ssm-agent
 
+# CloudWatch Agent 설치
+wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/arm64/latest/amazon-cloudwatch-agent.deb
+dpkg -i -E ./amazon-cloudwatch-agent.deb
+echo "CloudWatch Agent installed."
+
+# CloudWatch Agent 설정 및 시작
+/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
+    -a fetch-config \
+    -m ec2 \
+    -s \
+    -c ssm:/aws/cloudwatch-agent/mcserver
+
+echo "CloudWatch Agent configured and started."
+
 # EBS 볼륨 마운트 설정 
 echo "=== EBS Volume Setup ==="
 MOUNT_POINT="/mcserver"
